@@ -1,0 +1,204 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout: 5 Columns, Responsive */
+.contest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive Grid */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Contest Card Styling */
+.contest-card {
+  text-align: center;
+  padding: 16px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Contest Icon */
+.contest-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Fixed height for consistency */
+  margin-bottom: 10px;
+}
+
+.contest-image img {
+  width: 200px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px; /* Slightly rounded */
+}
+
+/* Contest Title */
+.contest-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Contest Platform */
+.contest-platform {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Button Styling */
+.mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card-actions a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Default Light Theme */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+}
+
+.dark-theme .navbar {
+  background-color: #333;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.light-icon{
+  color:#121212;
+}
+
+.dark-icon{
+  color:white;
+}
+
+/* General Navbar Styling */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Navbar */
+.navbar.dark {
+  background-color: #333;
+  color: white;
+}
+
+/* Navbar Text Color */
+h2 {
+  transition: color 0.3s ease;
+}
+h2.dark-text {
+  color: white;
+}
+
+.subscribe-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.thank-you {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4caf50;
+  color: white;
+  padding: 10px;
+}
+
+.Notified {
+  background-color: #007bff;  /* Blue color */
+  color: white;               /* White text */
+  font-size: 16px;            /* Readable text */
+  font-weight: bold;
+  padding: 10px 20px;         /* Button padding */
+  border: none;               /* Remove default border */
+  border-radius: 8px;         /* Rounded corners */
+  cursor: pointer;            /* Pointer on hover */
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.Notified:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
+  transform: scale(1.05);     /* Slight zoom effect */
+}
+
+.Notified:active {
+  background-color: #003d82;  /* Even darker blue when clicked */
+  transform: scale(0.98);     /* Click effect */
+}
+
+.Notified.subscribed {
+  background-color: #28a745;  /* Green if already subscribed */
+}
+
+
+
+
+

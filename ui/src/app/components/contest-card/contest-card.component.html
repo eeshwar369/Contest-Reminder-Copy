@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-body">
+        <h5>{{contest.name}}</h5>
+        <p>Platform: {{contest.platform}}</p>
+        <p>Start Time:{{contest.start_time | date:'short''}}</p>
+        <a [href]="contest.url" target="_blank">View Contest</a>
+        <button class="btn btn-success" (click)="subscribe()"></button>
+    </div>
+</div>

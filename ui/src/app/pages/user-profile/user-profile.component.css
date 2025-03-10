@@ -1,0 +1,121 @@
+/* Profile Button */
+.profile-btn {
+    display: flex;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 16px;
+  }
+  
+  .profile-btn:hover {
+    background: #0056b3;
+  }
+  
+  .profile-icon {
+    font-size: 24px;
+    margin-right: 8px;
+  }
+  
+  /* Dropdown Styling */
+  .dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-avatar {
+    font-size: 40px;
+    color: #007bff;
+  }
+  
+  .profile-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .profile-email {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Checkbox Styling */
+  .platforms {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .platform-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    gap: 8px;
+  }
+  
+  .platform-label input {
+    display: none;
+  }
+  
+  .custom-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #007bff;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .platform-label input:checked + .custom-checkbox {
+    background: #007bff;
+  }
+  
+  .platform-label input:checked + .custom-checkbox::after {
+    content: "✔";
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

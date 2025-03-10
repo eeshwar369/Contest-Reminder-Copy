@@ -1,0 +1,91 @@
+<!-- <div class="dashboard-container">
+  <h2>Upcoming Contests</h2>
+
+  <div class="contest-list">
+    <mat-card *ngFor="let contest of contests" class="contest-card">
+      <mat-card-header>
+        <div mat-card-avatar class="contest-icon">
+          <img [src]="contest.resource.icon" alt="Contest Icon" />
+        </div>
+        <mat-card-title>{{ contest.event }}</mat-card-title>
+        <mat-card-subtitle>
+          <strong>Platform:</strong> {{ contest.resource.name }}
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p><strong>Duration:</strong> {{ contest.durationHours }} hours</p>
+        <p><strong>Starts In:</strong> {{ contest.timeUntilStart }}</p>
+        <p><strong>Start Time:</strong> {{ contest.startTime | date:'medium' }}</p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <a mat-button color="primary" [href]="contest.href" target="_blank">
+          View Contest
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div> -->
+<!-- <nav class="navbar">
+  <h2>Dashboard</h2> -->
+  <!-- nug fixing of  they are vanishning when i turn on the toggle button -->
+
+  <nav class="navbar" [class.dark]="isDarkMode">
+    <h2 [class.dark-text]="isDarkMode">Welcome {{username}}</h2>
+  
+    <!-- Dark Mode Toggle Button -->
+    <div class="nav-right">
+    <button mat-icon-button (click)="toggleDarkMode()">
+      <mat-icon [ngClass]="{'dark-icon':isDarkMode, 'light-icon':!isDarkMode}">
+        {{ isDarkMode ? 'dark_mode' : 'light_mode' }}
+      </mat-icon>
+    </button>
+    <!-- <button mat-button class="profile-btn" (click)="toggleUserProfile()">
+      <mat-icon>account_circle</mat-icon> Profile
+    </button> -->
+  </div>
+  </nav>
+
+  <!-- <div *ngIf="showProfile" class="profile-container">
+    <app-user-profile></app-user-profile>
+  </div> -->
+
+  <!-- <div *ngIf="!showProfile"> -->
+    <div class="dashboard-container">
+      <h2>Upcoming Contests</h2>
+
+      <app-subscribe></app-subscribe>
+    
+      <div class="contest-grid">
+        <mat-card *ngFor="let contest of contests" class="contest-card">
+          <!-- Contest Icon on Top -->
+          <div class="contest-image">
+            <img [src]="contest.resource.icon" alt="Contest Icon" />
+          </div>
+    
+          <mat-card-content>
+            <h3 class="contest-title">{{ contest.event }}</h3>
+            <p class="contest-platform"><strong>Platform:</strong> {{ contest.resource.name }}</p>
+            <p><strong>Duration:</strong> {{ contest.durationHours }} hours</p>
+            <p><strong>Starts In:</strong> {{ contest.timeUntilStart }}</p>
+            <p><strong>Start Time:</strong> {{ contest.startTime | date:'medium' }}</p>
+            <!-- <button class="Notified"(click)="toggleSubscription(contest.resource.name)">Get Notified</button> -->
+            <button 
+            class="Notified" 
+            [ngClass]="{'subscribed': isSubscribed(contest.resource.name)}"
+            (click)="toggleSubscription(contest.resource.name)">
+            {{ isSubscribed(contest.resource.name) ? 'Subscribed' : 'Get Notified' }}
+        </button>
+        
+          </mat-card-content>
+    
+          <mat-card-actions>
+            <a mat-button color="primary" [href]="contest.href" target="_blank">View Contest</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+<!-- </div> -->
+  
+  
