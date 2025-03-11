@@ -17,8 +17,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
+    // debugger
     this.auuuthservive.login({email:this.email,password:this.password}).subscribe(
       (response)=>{
+        // debugger
         localStorage.setItem('token',response.token);
         localStorage.setItem('name',response.user.name);
         localStorage.setItem('email',response.email);
